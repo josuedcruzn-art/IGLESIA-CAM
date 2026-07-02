@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Iglesia Cristiana Centro de Adoracion Mundial</title>
+  <meta name="description" content="Bienvenido a la Iglesia Cristiana Centro de Adoracion Mundial. Disfruta de nuestros sermones, clips y apoya nuestro ministerio en línea.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Top Navigation Header -->
+  <header class="app-header">
+    <div class="container header-container">
+      <a href="#inicio" class="logo-area logo-link" aria-label="Volver al inicio">
+        <img src="logo.jpeg" alt="Logo de la Iglesia Cristiana Centro de Adoracion Mundial" class="church-logo">
+        <span class="brand-name">Iglesia Cristiana Centro de Adoracion Mundial</span>
+      </a>
+      <nav class="nav-links">
+        <a href="#inicio" class="nav-link active">Inicio</a>
+        <a href="#videos" class="nav-link">Sermones y Clips</a>
+        <a href="#donar" class="nav-link">Donaciones</a>
+        <a href="#admin" class="nav-link">Subir Contenido</a>
+      </nav>
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Nav Menu -->
+  <div class="mobile-nav" id="mobileNav">
+    <a href="#inicio" class="mobile-link">Inicio</a>
+    <a href="#videos" class="mobile-link">Sermones y Clips</a>
+    <a href="#donar" class="mobile-link">Donaciones</a>
+    <a href="#admin" class="mobile-link">Subir Contenido</a>
+  </div>
+
+  <main>
+    <!-- Hero Section -->
+    <section id="inicio" class="hero-section">
+      <div class="hero-glow"></div>
+      <div class="container hero-container">
+        <div class="hero-content">
+          <span class="hero-subtitle">Bienvenido a Casa</span>
+          <h1 class="hero-title">Conectando vidas con la <span class="highlight-text">gracia</span> y la verdad de Dios</h1>
+          <p class="hero-description">Un espacio para adorar, aprender y crecer juntos. Explora nuestros mensajes semanales y apoya la obra de nuestro ministerio en todo el mundo.</p>
+          <div class="hero-actions">
+            <a href="#videos" class="btn btn-primary">Ver Sermones</a>
+            <a href="#donar" class="btn btn-outline">Apoyar el Ministerio</a>
+          </div>
+        </div>
+        <div class="hero-featured-card">
+          <div class="featured-badge">Sermón Destacado</div>
+          <div class="featured-img-container" id="featuredPlayBtn">
+            <img src="uploads/thumbnails/default-sermon.jpg" alt="Sermón Destacado" class="featured-img">
+            <div class="play-overlay">
+              <svg viewBox="0 0 24 24" fill="none" class="play-icon-svg" xmlns="http://www.w3.org/2000/svg">
+                <path d="M8 5V19L19 12L8 5Z" fill="currentColor"/>
+              </svg>
+            </div>
+          </div>
+          <div class="featured-info">
+            <h3 class="featured-title">El Poder de la Gracia</h3>
+            <p class="featured-desc">Un mensaje transformador que nos enseña a vivir en paz y esperanza en tiempos difíciles.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sermons and Clips Section -->
+    <section id="videos" class="videos-section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Nuestra Mediateca</h2>
+          <p class="section-desc">Encuentra sermones dominicales completos o clips de 1 minuto con mensajes directos a tu corazón.</p>
+          
+          <div class="filter-tabs">
+            <button class="filter-tab active" data-filter="all">Todos</button>
+            <button class="filter-tab" data-filter="sermon">Sermones Completos</button>
+            <button class="filter-tab" data-filter="clip">Clips Cortos</button>
+          </div>
+        </div>
+
+        <div class="videos-grid" id="videosGrid">
+          <!-- Dynamically Populated by JS -->
+          <div class="loading-state">
+            <div class="spinner"></div>
+            <p>Cargando mensajes del cielo...</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Donations & Giving Section -->
+    <section id="donar" class="donation-section">
+      <div class="container donation-container">
+        <div class="donation-info-side">
+          <span class="section-subtitle">Generosidad</span>
+          <h2 class="section-title">Apoya Nuestra Misión</h2>
+          <p class="section-desc">Tu generosidad nos ayuda a llevar el mensaje de esperanza a más hogares, sostener ministerios locales y brindar ayuda a familias necesitadas.</p>
+          
+          <div class="biblical-quote">
+            <p>"Cada uno dé como propuso en su corazón: no con tristeza, ni por necesidad, porque Dios ama al dador alegre."</p>
+            <cite>2 Corintios 9:7</cite>
+          </div>
+        </div>
+
+        <div class="donation-card-side">
+          <div class="donation-box">
+            <div class="donation-tabs">
+              <button class="donation-tab active" id="tabBank">Transferencia Bancaria</button>
+              <button class="donation-tab" id="tabElectronic">Donación Electrónica</button>
+            </div>
+
+            <!-- Tab 1: Bank Transfer details -->
+            <div class="donation-pane active" id="paneBank">
+              <p class="pane-instruction">Realiza tu depósito directo desde tu aplicación bancaria utilizando los siguientes datos:</p>
+              
+              <div class="bank-details-list">
+                <div class="bank-item">
+                  <div class="bank-label">Banco</div>
+                  <div class="bank-value">Banco Nacional de la Gracia</div>
+                </div>
+                <div class="bank-item">
+                  <div class="bank-label">Titular de la Cuenta</div>
+                  <div class="bank-value">Iglesia Cristiana Gracia y Verdad</div>
+                </div>
+                <div class="bank-item">
+                  <div class="bank-label">Número de Cuenta</div>
+                  <div class="bank-value-copy">
+                    <span id="accountNum">1002-3004-5006-7890</span>
+                    <button class="btn-copy" onclick="copyText('accountNum')" aria-label="Copiar número de cuenta">
+                      <svg class="copy-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                    </button>
+                  </div>
+                </div>
+                <div class="bank-item">
+                  <div class="bank-label">CLABE / CBU / CCI</div>
+                  <div class="bank-value-copy">
+                    <span id="clabeNum">012180010023004567</span>
+                    <button class="btn-copy" onclick="copyText('clabeNum')" aria-label="Copiar clave interbancaria">
+                      <svg class="copy-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2 2v1"></path></svg>
+                    </button>
+                  </div>
+                </div>
+                <div class="bank-item">
+                  <div class="bank-label">NIT / RFC / Identificación</div>
+                  <div class="bank-value">901.445.892-3</div>
+                </div>
+              </div>
+
+              <div class="qr-area">
+                <div class="qr-mock">
+                  <!-- Simulated QR code design with CSS -->
+                  <div class="qr-code-box">
+                    <div class="qr-row">
+                      <div class="qr-cell dot square"></div><div class="qr-cell dot"></div><div class="qr-cell dot"></div><div class="qr-cell dot"></div><div class="qr-cell dot"></div><div class="qr-cell dot"></div><div class="qr-cell dot square"></div>
+                    </div>
+                    <div class="qr-row">
+                      <div class="qr-cell dot square"></div><div class="qr-cell"></div><div class="qr-cell"></div><div class="qr-cell dot"></div><div class="qr-cell"></div><div class="qr-cell"></div><div class="qr-cell dot square"></div>
+                    </div>
+                    <div class="qr-row">
+                      <div class="qr-cell dot square"></div><div class="qr-cell dot"></div><div class="qr-cell dot"></div><div class="qr-cell"></div><div class="qr-cell dot"></div><div class="qr-cell dot"></div><div class="qr-cell dot square"></div>
+                    </div>
+                    <div class="qr-row">
+                      <div class="qr-cell dot"></div><div class="qr-cell"></div><div class="qr-cell dot"></div><div class="qr-cell dot"></div><div class="qr-cell"></div><div class="qr-cell dot"></div><div class="qr-cell"></div>
+                    </div>
+                    <div class="qr-row">
+                      <div class="qr-cell dot"></div><div class="qr-cell dot"></div><div class="qr-cell"></div><div class="qr-cell dot"></div><div class="qr-cell dot"></div><div class="qr-cell"></div><div class="qr-cell dot"></div>
+                    </div>
+                    <div class="qr-row">
+                      <div class="qr-cell dot square"></div><div class="qr-cell"></div><div class="qr-cell dot"></div><div class="qr-cell"></div><div class="qr-cell dot"></div><div class="qr-cell dot"></div><div class="qr-cell dot"></div>
+                    </div>
+                    <div class="qr-row">
+                      <div class="qr-cell dot square"></div><div class="qr-cell dot"></div><div class="qr-cell dot"></div><div class="qr-cell dot"></div><div class="qr-cell"></div><div class="qr-cell dot"></div><div class="qr-cell dot square"></div>
+                    </div>
+                  </div>
+                  <span class="qr-logo-label">QR CoDi / PSE</span>
+                </div>
+                <div class="qr-text">
+                  <h4>Escanea para pagar</h4>
+                  <p>Escanea este código desde la app de tu banco favorito para transferir al instante.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Tab 2: Electronic Donation Form -->
+            <div class="donation-pane" id="paneElectronic">
+              <form id="electronicDonationForm" class="donation-form">
+                <div class="form-group">
+                  <label for="donorName">Nombre Completo</label>
+                  <input type="text" id="donorName" placeholder="Ej. Juan Pérez" required>
+                </div>
+                <div class="form-group">
+                  <label for="donorEmail">Correo Electrónico</label>
+                  <input type="email" id="donorEmail" placeholder="Ej. juan@correo.com" required>
+                </div>
+                <div class="form-row-2">
+                  <div class="form-group">
+                    <label for="donationAmount">Monto ($ USD)</label>
+                    <input type="number" id="donationAmount" placeholder="Ej. 50" min="1" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="paymentMethod">Método de Pago</label>
+                    <select id="paymentMethod" required>
+                      <option value="Tarjeta de Crédito">Tarjeta de Crédito / Débito</option>
+                      <option value="PSE / Transferencia Electrónica">PSE / Transferencia Electrónica</option>
+                      <option value="PayPal">PayPal</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="card-details-mock" id="cardDetailsMock">
+                  <div class="form-group">
+                    <label for="cardNumber">Número de Tarjeta</label>
+                    <input type="text" id="cardNumber" placeholder="4000 1234 5678 9010" maxlength="19" pattern="\d{4}\s?\d{4}\s?\d{4}\s?\d{4}">
+                  </div>
+                  <div class="form-row-2">
+                    <div class="form-group">
+                      <label for="cardExpiry">Vencimiento</label>
+                      <input type="text" id="cardExpiry" placeholder="MM/AA" maxlength="5">
+                    </div>
+                    <div class="form-group">
+                      <label for="cardCvc">CVC</label>
+                      <input type="password" id="cardCvc" placeholder="123" maxlength="3">
+                    </div>
+                  </div>
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-block">Ofrendar Ahora</button>
+              </form>
+
+              <!-- Success & Loading Overlay within the donation card -->
+              <div class="donation-status-overlay" id="donationStatusOverlay">
+                <div class="status-content" id="statusContent">
+                  <div class="spinner large"></div>
+                  <p class="status-msg">Procesando donación de forma segura...</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Upload Content / Admin Panel Section -->
+    <section id="admin" class="admin-section">
+      <div class="container container-medium">
+        <div class="admin-card">
+          <div class="admin-header">
+            <h2 class="admin-title">Panel de Carga de Contenido</h2>
+            <p class="admin-subtitle">Sube sermones dominicales o clips cortos inspiradores a la biblioteca digital.</p>
+          </div>
+          
+          <form id="uploadVideoForm" class="upload-form">
+            <div class="form-group">
+              <label for="videoTitle">Título del Video</label>
+              <input type="text" id="videoTitle" placeholder="Ej. El Regreso del Hijo Pródigo" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="videoDesc">Descripción / Pasaje Bíblico</label>
+              <textarea id="videoDesc" placeholder="Ej. Estudio del Evangelio de Lucas capítulo 15..." rows="3"></textarea>
+            </div>
+
+            <div class="form-row-2">
+              <div class="form-group">
+                <label for="videoCategory">Categoría</label>
+                <select id="videoCategory" required>
+                  <option value="sermon">Sermón Completo</option>
+                  <option value="clip">Clip Corto (Vertical)</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <!-- Keep visually cohesive empty space -->
+              </div>
+            </div>
+
+            <div class="form-row-2">
+              <div class="form-group file-input-group">
+                <label>Archivo de Video</label>
+                <label class="file-dropzone" for="videoFile">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="file-icon"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="17 8 12 3 7 8"></polyline><line x1="12" y1="3" x2="12" y2="15"></line></svg>
+                  <span class="file-label-text" id="videoFileLabel">Seleccionar .mp4, .mov, etc.</span>
+                  <input type="file" id="videoFile" accept="video/*" required style="display:none;">
+                </label>
+              </div>
+              <div class="form-group file-input-group">
+                <label>Miniatura (Imagen)</label>
+                <label class="file-dropzone" for="thumbnailFile">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="file-icon"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
+                  <span class="file-label-text" id="thumbnailFileLabel">Seleccionar .jpg, .png, etc.</span>
+                  <input type="file" id="thumbnailFile" accept="image/*" required style="display:none;">
+                </label>
+              </div>
+            </div>
+
+            <!-- Upload progress bar -->
+            <div class="progress-container" id="progressContainer">
+              <div class="progress-bar-wrapper">
+                <div class="progress-bar" id="progressBar"></div>
+              </div>
+              <span class="progress-percent" id="progressPercent">0%</span>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-block">Subir Video a la Nube</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Cinema View Video Player Modal -->
+  <div class="video-modal" id="videoModal" aria-hidden="true">
+    <div class="modal-overlay" id="modalOverlay"></div>
+    <div class="modal-content">
+      <button class="modal-close" id="modalClose" aria-label="Cerrar reproductor">×</button>
+      <div class="video-wrapper">
+        <video id="mainVideoPlayer" controls autoplay controlsList="nodownload"></video>
+      </div>
+      <div class="modal-info">
+        <h2 id="modalVideoTitle" class="modal-title">Título del Video</h2>
+        <p id="modalVideoDesc" class="modal-desc">Descripción del video...</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Notification Toast -->
+  <div class="toast-notification" id="toast">Copiado al portapapeles</div>
+
+  <!-- Church Footer -->
+  <footer class="app-footer">
+    <div class="container footer-container">
+      <div class="footer-brand">
+        <div class="logo-area">
+          <svg class="church-logo" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 2L9 9H3L8 13L6 20L12 16L18 20L16 13L21 9H15L12 2Z" fill="var(--color-gold)"/>
+            <path d="M12 5V14M10 8H14" stroke="var(--color-bg)" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+          <span class="brand-name">Gracia & Verdad</span>
+        </div>
+        <p class="footer-tagline">Una iglesia unida para glorificar a Dios y bendecir al prójimo.</p>
+      </div>
+      <div class="footer-info">
+        <h4>Horarios de Culto</h4>
+        <p>Domingos: 8:00 AM, 10:30 AM y 6:00 PM</p>
+        <p>Miércoles de Oración: 7:00 PM</p>
+      </div>
+      <div class="footer-contact">
+        <h4>Contacto</h4>
+        <p>Dirección: Av. de la Fe #456, Ciudad de Esperanza</p>
+        <p>Email: contacto@graciayverdad.org</p>
+        <p>Teléfono: +57 (300) 123-4567</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <p>&copy; 2026 Iglesia Gracia y Verdad. Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

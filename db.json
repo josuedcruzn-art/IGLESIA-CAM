@@ -1,0 +1,42 @@
+{
+  "videos": [
+    {
+      "id": "default-sermon-1",
+      "title": "El Poder de la Gracia",
+      "description": "Un mensaje inspirador sobre cómo la gracia de Dios transforma nuestras vidas cotidianas.",
+      "category": "sermon",
+      "videoUrl": "uploads/videos/default-sermon.mp4",
+      "thumbnailUrl": "uploads/thumbnails/default-sermon.jpg",
+      "date": "2026-07-02T01:00:00.000Z"
+    },
+    {
+      "id": "default-clip-1",
+      "title": "Fe en tiempos difíciles",
+      "description": "Un clip corto sobre mantener la fe en medio de las tormentas.",
+      "category": "clip",
+      "videoUrl": "uploads/videos/default-clip.mp4",
+      "thumbnailUrl": "uploads/thumbnails/default-clip.jpg",
+      "date": "2026-07-02T01:00:00.000Z"
+    }
+  ],
+  "donations": [
+    {
+      "id": "don-1",
+      "donorName": "María Rodríguez",
+      "email": "maria.r@example.com",
+      "amount": 50,
+      "paymentMethod": "Donación Electrónica",
+      "date": "2026-07-02T01:00:00.000Z",
+      "status": "Completada"
+    },
+    {
+      "id": "don-2",
+      "donorName": "Juan Pérez",
+      "email": "juan.perez@example.com",
+      "amount": 100,
+      "paymentMethod": "Transferencia Bancaria",
+      "date": "2026-07-02T01:00:00.000Z",
+      "status": "Completada"
+    }
+  ]
+}

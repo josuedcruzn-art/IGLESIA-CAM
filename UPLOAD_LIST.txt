@@ -1,0 +1,20 @@
+Sube estos archivos y carpetas a la raíz de tu hosting InfinityFree (la carpeta pública del sitio):
+
+Archivos raíz:
+- index.html
+- app.js
+- style.css
+- logo.jpeg
+- .htaccess
+
+Carpeta api/:
+- api/db.json
+- api/donations.php
+- api/videos.php
+
+Carpeta uploads/:
+- uploads/thumbnails/default-sermon.jpg
+- uploads/thumbnails/default-clip.jpg
+- uploads/videos/ (se creará automáticamente al subir videos si hace falta)
+
+No subas la carpeta padre "htdocs"; sube solo el contenido de esta carpeta.
